@@ -1,8 +1,9 @@
 <?php
 
-namespace View {
+namespace View;
 
-    function controlHeader() {
+
+function controlHeader() {
 
 ?>
 <!DOCTYPE html>
@@ -12,9 +13,10 @@ namespace View {
     <div class="content">
 <?php
 
-    }
+}
 
-    function controlUseradd() {
+function controlUseradd()
+{
 
 ?>
         <h3>Mitarbeiter hinzuf&uuml;gen</h3>
@@ -39,19 +41,21 @@ namespace View {
         </form>
 <?php
 
-    }
+}
 
-    function controlListUsers($Users) {
+function controlListUsers($Users)
+{
 ?>
     <br>
     <h3>Mitarbeiter verwalten</h3>
     <br>
 <?php
-        if(count($Users) == 0) {
+    if(count($Users) == 0)
+    {
 
-            echo "Derzeit keine Mitarbeiter";
+        echo "Derzeit keine Mitarbeiter";
 
-        } else {
+    } else {
 ?>
     <table class="table">
         <tr>
@@ -63,7 +67,8 @@ namespace View {
         </tr>
 
 <?php
-            foreach($Users as $Id => $User) {
+        foreach($Users as $Id => $User)
+        {
 ?>
         <tr class="rows">
             <th><?= $User['Vorname'] ?></th>
@@ -78,21 +83,20 @@ namespace View {
             </th>
         </tr>
 <?php
-            }
+        }
 ?>
 </table>
 <?php
-        }
-
     }
 
-    function controlFooter() {
+}
+
+function controlFooter()
+{
 
 ?>
     </div>
 </body>
 <?php
-
-    }
 
 }

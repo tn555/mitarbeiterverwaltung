@@ -5,7 +5,8 @@ require("view.php");
 
 $DB = new SQLite3("db/db.sqlite3");
 
-if(!isset($_GET['route'])) {
+if(!isset($_GET['route']))
+{
 
     $route = "index";
 
@@ -15,7 +16,8 @@ if(!isset($_GET['route'])) {
 
 }
 
-if($route == "index") {
+if($route == "index")
+{
 
     View\controlHeader();
     View\controlUseradd();
@@ -25,9 +27,11 @@ if($route == "index") {
 }
 
 
-if($route == "del") {
+if($route == "del")
+{
 
-    if(isset($_POST['Id'])) {
+    if(isset($_POST['Id']))
+    {
 
         Data\delUser($DB, $_POST['Id']);
         Header("Location: index.php");
@@ -36,9 +40,11 @@ if($route == "del") {
 
 }
 
-if($route == "add") {
+if($route == "add")
+{
 
-    if(isset($_POST['vorname'], $_POST['nachname'], $_POST['status'])) {
+    if(isset($_POST['vorname'], $_POST['nachname'], $_POST['status']))
+    {
 
         Data\addUser($DB, $_POST['vorname'], $_POST['nachname'], $_POST['status']);
         Header("Location: index.php");

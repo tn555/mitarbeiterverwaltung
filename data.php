@@ -1,13 +1,16 @@
 <?php
 
-namespace Data {
+namespace Data
+{
 
-    function getUsers($DB) {
+    function getUsers($DB)
+    {
 
         $result = $DB->query("SELECT * FROM Mitarbeiter ORDER BY Id");
 
         $return = array();
-        while($row = $result->fetchArray(SQLITE3_ASSOC)) {
+        while($row = $result->fetchArray(SQLITE3_ASSOC))
+        {
 
             $return[] = $row;
 
@@ -17,7 +20,8 @@ namespace Data {
 
     }
 
-    function delUser($DB, $Id) {
+    function delUser($DB, $Id)
+    {
 
         $query = $DB->prepare("DELETE FROM Mitarbeiter WHERE ID = :id");
         $query->bindValue(":id", $Id, SQLITE3_INTEGER);
@@ -25,7 +29,8 @@ namespace Data {
 
     }
 
-    function addUser($DB, $Vorname, $Nachname, $Status) {
+    function addUser($DB, $Vorname, $Nachname, $Status)
+    {
 
         $query = $DB->prepare("INSERT INTO Mitarbeiter (Vorname, Nachname, Status, Zeit)
                                 VALUES (:Vorname, :Nachname, :Status, :Zeit)");
