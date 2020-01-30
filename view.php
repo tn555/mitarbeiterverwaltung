@@ -3,7 +3,8 @@
 namespace View;
 
 
-function controlHeader() {
+function controlHeader()
+{
 
 ?>
 <!DOCTYPE html>
@@ -45,6 +46,7 @@ function controlUseradd()
 
 function controlListUsers($Users)
 {
+
 ?>
     <br>
     <h3>Mitarbeiter verwalten</h3>
