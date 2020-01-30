@@ -1,0 +1,30 @@
+.content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    min-height: 200px;
+    border: 1px solid grey;
+    margin-top: 50px;
+    padding: 15px;
+}
+
+.formblock {
+    width: 48.5%;
+    display: inline-block;
+}
+
+.formblockright {
+    margin-left: 15px;
+}
+
+.button {
+    width: 100%;
+}
+
+.table {
+    width: 100%;
+}
+
+.rows {
+    font-size: 15px;
+}
